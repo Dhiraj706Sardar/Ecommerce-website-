@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductService from '../services/ProductService';
 import { handleApiError } from '../utils/errorHandler';
-import { ToastContainer, toast } from 'react-toastify';
+// Removed unused ToastContainer and toast imports
 import 'react-toastify/dist/ReactToastify.css';
 
 // Utility function to truncate and expand text
@@ -39,7 +39,7 @@ const ProductDetail = () => {
 
     useEffect(() => {
         fetchProductDetails();
-    }, [id]);
+    }, [fetchProductDetails]);
 
     const fetchProductDetails = async () => {
         try {

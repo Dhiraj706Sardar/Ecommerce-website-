@@ -30,12 +30,12 @@ const Footer = () => {
                 <div>
                     <h4 className="font-semibold mb-4">Connect With Us</h4>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-300 hover:text-white">🐦 Twitter</a>
-                        <a href="#" className="text-gray-300 hover:text-white">📘 Facebook</a>
-                        <a href="#" className="text-gray-300 hover:text-white">📸 Instagram</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">🐦 Twitter</a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">📘 Facebook</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">📸 Instagram</a>
                     </div>
                     <div className="mt-4 text-sm text-gray-500">
-                        © {new Date().getFullYear()} E-Commerce Store. All rights reserved.
+                        &copy; {new Date().getFullYear()} E-Commerce Store. All rights reserved.
                     </div>
                 </div>
             </div>
