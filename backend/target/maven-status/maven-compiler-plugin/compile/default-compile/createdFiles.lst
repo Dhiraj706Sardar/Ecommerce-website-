@@ -1,0 +1,6 @@
+com\ecommerce\app\service\ProductService.class
+com\ecommerce\app\model\Product.class
+com\ecommerce\app\controller\ProductController.class
+com\ecommerce\app\model\Rating.class
+com\ecommerce\app\repository\ProductRepository.class
+com\ecommerce\app\EcommerceApplication.class
