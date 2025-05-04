@@ -20,6 +20,23 @@ A full-stack e-commerce application built with Java Spring Boot backend and Reac
 - Node.js 16+
 - Docker (optional)
 
+## Application Screenshots
+
+### Home Page
+![Home Page](screenshots/Screenshot%202025-05-05%20014748.png)
+
+### Product Details
+![Product Details](screenshots/Screenshot%202025-05-05%20014817.png)
+
+### Product Category
+![Product Search](screenshots/Screenshot%202025-05-05%20014837.png)
+
+### Swagger API
+![Swagger API](screenshots/Screenshot%202025-05-05%20014952.png)
+
+### H2 Database
+![H2 Database](screenshots/Screenshot%202025-05-05%20015009.png)
+
 ## Local Development
 
 ### Backend
@@ -33,14 +50,55 @@ A full-stack e-commerce application built with Java Spring Boot backend and Reac
 3. Run `npm start`
 4. Access app at `http://localhost:3000`
 
-## Docker Deployment
-1. Run `docker-compose up --build`
-2. Access app at `http://localhost:3000`
 
 ## Project Structure
 - `backend/`: Spring Boot application
 - `frontend/`: React.js application
-- `docker-compose.yml`: Container orchestration
+- `screenshots/`: Application screenshots
 
-## License
-MIT License
+## Application Configuration
+
+### Backend Configuration (`application.properties`)
+
+#### Database Configuration
+```properties
+# H2 In-Memory Database
+spring.datasource.url=jdbc:h2:mem:ecommercedb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# H2 Console Configuration
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+```
+
+#### JPA and Hibernate Configuration
+```properties
+# JPA Settings
+spring.jpa.defer-datasource-initialization=true
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+#### Logging Configuration
+```properties
+# Logging Levels
+logging.level.org.springframework=INFO
+logging.level.com.ecommerce=DEBUG
+```
+
+#### Swagger Configuration
+```properties
+# Swagger/OpenAPI Path
+springdoc.swagger-ui.path=/swagger-ui.html
+```
+
+### Key Configuration Points
+- Uses H2 in-memory database for development
+- Automatic schema creation and drop
+- Enabled SQL logging for debugging
+- Integrated Swagger for API documentation
+- Configurable logging levels
+
